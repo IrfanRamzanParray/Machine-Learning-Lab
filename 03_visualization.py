@@ -11,7 +11,7 @@ iris = load_iris()
 # Create DataFrame
 df = pd.DataFrame(data=iris.data,columns=iris.feature_names)
 df["species"] = iris.target
-
+#print(df)
 
 # Histogram
 plt.figure()
@@ -22,7 +22,7 @@ plt.title("Histogram of Sepal Length")
 plt.show()
 
 
-#Scatter plot
+# #Scatter plot
 plt.figure()
 plt.scatter(
     df["sepal length (cm)"],
@@ -34,9 +34,9 @@ plt.ylabel("Petal Length (cm)")
 plt.title("Sepal vs Petal Length")
 plt.show()
 
-#Box Plot
+# #Box Plot
 plt.figure()
 df.iloc[:, :-1].boxplot()
 plt.title("Boxplot of Features")
-#plt.xticks(rotation=45)
+plt.xticks(rotation=45)
 plt.show()

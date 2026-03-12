@@ -8,6 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 # Load dataset
 iris = load_iris()
@@ -53,3 +54,10 @@ disp = ConfusionMatrixDisplay(
 disp.plot()
 plt.title("Confusion Matrix - Logistic Regression (Iris Dataset)")
 plt.show()
+
+precision = precision_score(y_test, y_pred, average='weighted')
+recall = recall_score(y_test, y_pred, average='weighted')
+f1 = f1_score(y_test, y_pred, average='weighted')
+print(precision)
+print(recall)
+print(f1)

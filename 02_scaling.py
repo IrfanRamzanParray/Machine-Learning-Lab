@@ -14,6 +14,7 @@ df = pd.DataFrame(data=iris.data,columns=iris.feature_names)
 # Add target column
 df["species"] = iris.target
 
+print(df)
 #Feature Scaling
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(df.iloc[:, :-1])
