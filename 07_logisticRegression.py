@@ -13,8 +13,8 @@ from sklearn.impute import SimpleImputer
 # 1. Load dataset
 #df = pd.read_csv(r"D:\GCET\Machine Learning\Datasets\framingham.csv")   # replace with your dataset file
 df = pd.read_csv("D:/GCET/Machine Learning/Datasets/framingham.csv")
-df = df.dropna()  # drop entire row
-#df = df.fillna(df.mean())  #replace the null with mean
+#df = df.dropna()  # drop entire row
+df = df.fillna(df.mean())  #replace the null with mean
 
 
 
