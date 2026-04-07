@@ -22,7 +22,7 @@ diabetes = load_diabetes()
 # Convert to a DataFrame
 df = pd.DataFrame(data=diabetes.data, columns=diabetes.feature_names)
 df['target'] = diabetes.target
-#print(df.head())
+print(df.shape)
 
 X = df.iloc[:, :-1]   # all columns except last
 y = df.iloc[:, -1]  
